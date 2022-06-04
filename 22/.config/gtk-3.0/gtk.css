@@ -1,0 +1,4 @@
+/* Adds padding to Xfce Terminal */
+VteTerminal, vte-terminal {
+    padding: 32px;
+}
