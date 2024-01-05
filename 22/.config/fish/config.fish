@@ -4,7 +4,19 @@ end
 
 # enable grc (colorizer)
 # https://github.com/garabik/grc
-source /etc/grc.fish
+if type -q grc
+    source /etc/grc.fish
+else
+    set_color yellow
+    echo -n "[warn]: `"
+    set_color green
+    echo -n grc
+    set_color yellow
+    echo "` is not installed on this system (or isn't available in the path)."
+    echo "Please install it for colorful terminal output."
+    echo
+    set_color normal
+end
 
 # remind me to get `rye` through the function
 # (otherwise some setups get messed up by the venv)
