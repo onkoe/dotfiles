@@ -25,3 +25,6 @@ alias rye 'set_color yellow; echo -n "Please use the `"; set_color blue; echo -n
 
 # shorthand for gnome text editor
 alias gte gnome-text-editor
+
+# make `tree` always colorful 
+alias tree 'tree -C'
