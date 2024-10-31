@@ -1,7 +1,3 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 # enable grc (colorizer)
 # https://github.com/garabik/grc
 if type -q grc
@@ -23,8 +19,16 @@ end
 # (ahem: https://github.com/espressif/esp-idf/issues/8470)
 alias rye 'set_color yellow; echo -n "Please use the `"; set_color blue; echo -n "rye_setup"; set_color yellow; echo "` function to continue with Rye..."'
 
+# check to ensure fisher is installed.
+#
+# if it's not, we'll install it, alongside any plugins we want...
+if ! test -n "$_fisher_plugins"
+    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+    fisher install edc/bass
+end
+
 # shorthand for gnome text editor
 alias gte gnome-text-editor
 
-# make `tree` always colorful 
+# make `tree` always colorful
 alias tree 'tree -C'
