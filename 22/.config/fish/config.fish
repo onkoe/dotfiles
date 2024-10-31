@@ -32,3 +32,6 @@ alias gte gnome-text-editor
 
 # make `tree` always colorful
 alias tree 'tree -C'
+
+# source `ros2`
+bass source /opt/ros/jazzy/setup.sh
