@@ -1,0 +1,48 @@
+# note: this is a port of Adwaita Dark
+
+[window]
+decorations_theme_variant = "Dark"
+
+[colors.primary]
+foreground = "#F6F5F4"
+background = "#1D1D1D"
+dim_foreground = "#B0AFAC"
+bright_foreground = "#282828"
+
+[colors.footer_bar]
+foreground = "#FCFCFC"
+background = "#282828"
+
+[colors.selection]
+foreground = "#FFFFFF"
+background = "#1C71D8"
+
+[colors.normal]
+black = "#1c1c1c"
+red = "#ED333B"
+green = "#26A269"
+yellow = "#F5C211"
+blue = "#1A5FB4"
+magenta = "#9141AC"
+cyan = "#33B2A4"
+white = "#DEDDDA"
+
+[colors.bright]
+black = "#3D3846"
+red = "#F66151"
+green = "#33D17A"
+yellow = "#F6D32D"
+blue = "#62A0EA"
+magenta = "#DC8ADD"
+cyan = "#93DDC2"
+white = "#FCFCFC"
+
+[colors.dim]
+black = "#000000"
+red = "#A51D2D"
+green = "#1C6849"
+yellow = "#D38B09"
+blue = "#193D66"
+magenta = "#613583"
+cyan = "#218787"
+white = "#9A9996"
