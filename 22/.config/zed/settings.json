@@ -1,0 +1,168 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed documentation:
+// https://zed.dev/docs/configuring-zed
+{
+  // #######################################
+  //              EXTENSIONS
+  // #######################################
+
+  // install a number of extensions automatically!
+  "auto_install_extensions": {
+    // html, css, js, wasm
+    "biome": true,
+    "html": true,
+    "scss": true,
+    "svelte": true,
+
+    // python
+    "basedpyright": true,
+    "python-refactoring": true,
+    "ruff": true,
+
+    // rust
+    "toml": true,
+
+    // c++
+    "neocmake": true,
+
+    // misc. devops stuff
+    "dockerfile": true,
+    "docker-compose": true,
+    "git-firefly": true,
+    "ini": true,
+    "log": true,
+    "rainbow-csv": true,
+    "rpmspec": true,
+    "xml": true,
+
+    // themes
+    "adwaita-pastel": true,
+    "base16": true,
+    "rose-pine-theme": true,
+    "zedwaita": true,
+
+    // documentation and writing
+    "asciidoc": true,
+    "markdown-oxide": true,
+    "typst": true,
+
+    // scripting
+    "basher": true,
+    "fish": true,
+    "just": true,
+
+    // misc. languages
+    "assembly": true,
+    "dart": true,
+    "gdscript": true,
+    "java": true,
+    "kotlin": true,
+    "ruby": true
+  },
+
+  // #######################################
+  //              APPEARANCE
+  // #######################################
+
+  // remove distracting git hover functionality
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+
+  // turn on inlay hints
+  "inlay_hints": {
+    "enabled": true,
+    "show_parameter_hints": true
+  },
+
+  // follow system theme and use specific themes
+  "theme": {
+    "mode": "system",
+    "light": "Adwaita Pastel Light",
+    "dark": "Base16 darkmoss"
+  },
+
+  // set font settings
+  "ui_font_family": "Iosevka",
+  "buffer_font_family": "Iosevka Fixed",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 16.0,
+
+  // #######################################
+  //                BEHAVIOR
+  // #######################################
+
+  // automatically mute the mic when joining a live share session
+  "calls": {
+    "mute_on_join": true
+  },
+
+  // i don't use the outline panel, so get rid of it
+  "outline_panel": {
+    "button": false
+  },
+
+  // format files when i save
+  "format_on_save": "on",
+
+  // allow using assistant, but turn off edit predictions
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-thinking-latest"
+    },
+    "version": "2"
+  },
+  "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+
+  // turn on telemetry explicitly ;D
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+
+  // use keyboard shortcuts like vscode
+  "base_keymap": "VSCode",
+
+  // #######################################
+  //         LANGUAGE CONFIGURATION
+  // #######################################
+
+  // override lang detection for specific file extensions
+  "file_types": {
+    "XML": [
+      // SDF format for Gazebo simulator (ROS 2)
+      "sdf"
+    ]
+  },
+
+  // language server settings
+  "lsp": {
+    // use `clippy` as Rust's linter
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy"
+        }
+      }
+    },
+
+    // ask java to use Java 21 explicitly. otherwise, the extension fails to
+    // initialize since `jdtls` sucks ass at finding the right java version lol
+    "jdtls": {
+      "initialization_options": {
+        "settings": {
+          "java": {
+            "home": "/usr/lib/jvm/java-21-openjdk"
+          }
+        }
+      }
+    }
+  }
+}
